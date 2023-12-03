@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="admin-dashboard">
+        <div class="search-bar">
+            <input type="text" id="searchInput" class="search-input" onkeypress="handleKeyPress(event)" placeholder="Search...">
+            <select id="propertySelect" class="btn">
+                <option value="name">Name</option>
+                <option value="email">Email</option>
+                <option value="role">Role</option>
+              </select>
+        </div>
+        
+        <div class="table">
+            <!-- Table headers go here -->
+            <div class="table-body">
+                <div class="table-row">
+                    <div><input type="checkbox" id="selectAll" onclick="toggleSelectAll()"></div>
+                    <div>Name</div>
+                    <div>Email</div>
+                    <div>Role</div>
+                    <div>Actions</div>
+                </div>
+            </div>
+            <div class="table-body" id="tableBody">
+                <!-- Table rows go here -->
+
+            </div>
+        </div>
+        <div class="pagination">
+
+            <button class="first-page btn" onclick="goToPage(1)"><b>&lt&lt</b></button>
+            <button class="previous-page btn" onclick="previousPage()"><b> &lt</b></button>
+            <span id="currentPage" style="padding: 0.5rem;"> 1 </span>
+            <button class="next-page btn" onclick="nextPage()"><b>&gt</b></button>
+            <button class="last-page btn" onclick="goToPage(totalPages)"><b>&gt&gt</b></button>
+
+            <div id="paginationText" style="float: right; color: grey;"></div>
+
+        </div>
+        <div>
+            <button class="delete-selected btn" style="display: none;" id="deleteAll" onclick="deleteSelected()">Delete
+                Selected</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

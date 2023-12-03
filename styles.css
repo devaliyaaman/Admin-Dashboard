@@ -1,0 +1,123 @@
+/* Resetting Default CSS */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ADmin Dashboard styling */
+.admin-dashboard {
+    margin: auto;
+    padding: 1.5rem;
+    border: 1px solid grey;
+    border-radius: 7px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: scroll;
+}
+
+/* Search Section Styling  */
+.search-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+
+.search-icon {
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+
+/* STyling Table of Data  */
+.table {
+    border: 1px solid grey;
+    padding: 1rem;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.table-body {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.table-row {
+    display: grid;
+    margin: auto;
+    padding: 0.3rem;
+    border: 1px solid grey;
+    border-radius: 7px;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    width: 100%;
+}
+
+.editing-row {
+    border: 2px solid black;
+}
+
+
+/* Styling Pagination Menu  */
+.pagination {
+    padding: 0.5rem 0.1rem;
+    gap: 1rem;
+}
+
+.btn {
+    border-radius: 7px;
+    padding: 0.2rem 0.7rem;
+    border: 0.5px solid grey;
+}
+
+.delete-selected {
+    background-color: rgb(246, 102, 102);
+}
+
+
+/* Media Query for Small Devices (Phones) */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0.25rem;
+    }
+
+    .admin-dashboard {
+        padding: 0.5rem;
+        /* Adjust as needed for small screens */
+        max-width: auto;
+    }
+
+    .search-input {
+        width: 100%;
+        /* Full width for small screens */
+    }
+
+    .table {
+        padding: 0.5rem 0.3rem;
+        /* Adjust table padding for small screens */
+    }
+
+    .table-row {
+        grid-template-columns: 0.25fr 2fr 2fr 0.5fr 0.5fr;
+        gap: 0.75rem;
+    }
+}
